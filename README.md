@@ -1,50 +1,28 @@
-## Apresentação
+# API de Gerenciamento de Blog e Usuários
 
-Projeto trabalhado durante a disciplina de desenvolvimento backend do curso técnico do instituto Metrópole Digital UFRN.
+Uma API RESTful desenvolvida em Node.js para gerenciamento de postagens e usuários, com suporte a autenticação via token JWT, upload de imagens e renderização de views no servidor.
 
-## Iniciando
+O projeto foi construído utilizando a arquitetura MVC (Model-View-Controller) e conta com documentação baseada na especificação OpenAPI (Swagger).
 
-Para iniciar o projeto em modo de desenvolvimento execute os seguintes comandos:
+## 🚀 Tecnologias Utilizadas
 
-```shell
-$ npm install
-$ npm run dev
-```
+- **Backend:** Node.js, Express
+- **Banco de Dados:** SQLite (Desenvolvimento) e PostgreSQL (Produção)
+- **ORM:** Sequelize
+- **Autenticação:** JSON Web Token (JWT)
+- **Views:** EJS (Embedded JavaScript templating)
+- **Documentação:** Swagger (`api.yaml`)
 
-> No modo de desenvolvimento é utilizado o banco SQLite. Você pode alterar essa configuração em /src/db/config/config.json
+## ⚙️ Funcionalidades
 
-Em produção o comando deve ser:
+- CRUD completo de Usuários e Posts.
+- Autenticação e proteção de rotas (Middlewares).
+- Upload local de imagens de destaque para os posts.
+- Validação de schemas nos dados de entrada.
+- Views integradas para navegação visual e consumo dos dados.
 
-```shell
-$ npm install
-$ npm start
-```
-> Em produção, o sistema utilizará a variável de ambiente DATABASE_URL para o acesso ao PostgreSQL.
+## 🛠️ Como Executar Localmente
 
-## Migrações
-
-Por padrão o sistema executa as migrações, ainda não executadas, na sua inicialização. Caso deseje executar manualmente faça:
-
-```shell
-$ npx sequelize-cli db:migrate 
-```
-
-## Sementes
-
-Caso deseje, você pode executar a semente para criar o primeiro usuário do sistema. Para executá-la utilize:
-
-```shell
-$ npx sequelize-cli db:seed:all
-```
-
-Ao executar, o seguinte usuário/senha será criado: root@gmail.com/segredo
-
-## Variáveis de ambiente
-
-A tabela abaixo lista as variáveis de ambiente disponíveis. Algumas delas são obrigatórias para que a aplicação possa subir corretamente.
-
-| Variável            | Descrição                       | Obrigatória? |
-|---------------------|---------------------------------|--------------|
-| ACCESS_TOKEN_SECRET | Secret do token JWT             | Sim          |
-| NODE_ENV            | Ambiente do Node.js             | Não          |
-| DATABASE_URL        | URl de acesso ao banco de dados | Apenas para produção |
+1. Instale as dependências:
+   ```bash
+   npm install
