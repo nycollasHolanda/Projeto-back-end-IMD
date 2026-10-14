@@ -1,28 +1,35 @@
-# API de Gerenciamento de Blog e Usuários
+# API de Blog e Gerenciamento de Usuários
 
-Uma API RESTful desenvolvida em Node.js para gerenciamento de postagens e usuários, com suporte a autenticação via token JWT, upload de imagens e renderização de views no servidor.
+Uma API RESTful completa desenvolvida em **Node.js** para o gerenciamento de postagens e usuários de um blog. O sistema conta com autenticação segura via tokens, upload de arquivos, validação de dados e uma interface de visualização acoplada.
 
-O projeto foi construído utilizando a arquitetura MVC (Model-View-Controller) e conta com documentação baseada na especificação OpenAPI (Swagger).
+Este projeto foi construído utilizando o padrão **MVC (Model-View-Controller)** e está documentado com a especificação OpenAPI (Swagger).
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- **Backend:** Node.js, Express
-- **Banco de Dados:** SQLite (Desenvolvimento) e PostgreSQL (Produção)
-- **ORM:** Sequelize
-- **Autenticação:** JSON Web Token (JWT)
-- **Views:** EJS (Embedded JavaScript templating)
-- **Documentação:** Swagger (`api.yaml`)
+- **Linguagem & Ambiente:** JavaScript (ES6+) / Node.js
+- **Framework Web:** Express.js
+- **Banco de Dados:** SQLite (Desenvolvimento) / PostgreSQL (Produção)
+- **ORM:** Sequelize (com Migrations e Seeders)
+- **Autenticação:** JSON Web Token (JWT) e Bcrypt
+- **Templates (Views):** EJS
+- **Documentação:** Swagger / OpenAPI 3.0 (`api.yaml`)
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
-- CRUD completo de Usuários e Posts.
-- Autenticação e proteção de rotas (Middlewares).
-- Upload local de imagens de destaque para os posts.
-- Validação de schemas nos dados de entrada.
-- Views integradas para navegação visual e consumo dos dados.
+- **Usuários:** Cadastro, listagem, busca por ID e exclusão.
+- **Autenticação:** Login com geração de Token JWT (Bearer Token).
+- **Postagens:** Criação de publicações vinculadas a usuários autenticados.
+- **Uploads:** Suporte a upload local de imagens de destaque.
+- **Views:** Páginas HTML renderizadas pelo servidor para visualização das postagens.
 
-## 🛠️ Como Executar Localmente
+---
 
-1. Instale as dependências:
-   ```bash
-   npm install
+## Como rodar o projeto localmente
+
+Para rodar este projeto no seu computador, você precisará ter o [Git](https://git-scm.com/) e o [Node.js](https://nodejs.org/pt-br/) instalados.
+
+**1. Clone o repositório**
+```bash
+git clone "https://github.com/SEU_USUARIO/Projeto-back-end-IMD.git"
+
+cd Projeto-back-end-IMD
